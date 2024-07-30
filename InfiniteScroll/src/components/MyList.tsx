@@ -31,7 +31,6 @@ const MyList = () => {
       renderItem={({item}) => <CharacterListItem character={item} />}
       contentContainerStyle={{gap: 10}}
       onEndReached={fetchNextPage}
-      
       ListFooterComponent={() => (
         <View>
           {loading && <ActivityIndicator size="large" />}
