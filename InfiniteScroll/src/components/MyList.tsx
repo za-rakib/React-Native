@@ -18,12 +18,16 @@ const MyList = () => {
     setLoading(true);
     const response = await fetch(nextPage);
     const responseJson = await response.json();
-    setItems(exisingItems => {
-      return [...exisingItems, ...responseJson.results];
+    setItems(existingItems => {
+      return [...existingItems, ...responseJson.results];
     });
     setNextPage(responseJson.info.next);
     setLoading(false);
   };
+
+  useEffect(() => {
+    fetchNextPage();
+  }, []);
 
   return (
     <FlatList
@@ -31,15 +35,9 @@ const MyList = () => {
       renderItem={({item}) => <CharacterListItem character={item} />}
       contentContainerStyle={{gap: 10}}
       onEndReached={fetchNextPage}
+      onEndReachedThreshold={3}
       ListFooterComponent={() => (
-        <View>
-          {loading && <ActivityIndicator size="large" />}
-          <Text
-            onPress={fetchNextPage}
-            style={{alignSelf: 'center', fontSize: 18, color: 'blue'}}>
-            Load More
-          </Text>
-        </View>
+        <>{loading && <ActivityIndicator size="large" />}</>
       )}
     />
   );
