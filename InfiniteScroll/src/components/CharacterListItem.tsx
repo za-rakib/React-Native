@@ -8,7 +8,7 @@ type CharacterListItem = {
 };
 
 const CharacterListItem = ({character}: CharacterListItem) => {
-  console.log({character: character.id});
+  //  r console.log({character: character.id});
   return (
     <View style={styles.container}>
       <Text style={styles.name}>{character.name}</Text>

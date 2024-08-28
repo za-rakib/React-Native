@@ -32,6 +32,10 @@ const MyList = () => {
     setLoading(false);
   };
 
+  const onEndReached = () => {
+    console.log('on end');
+    fetchPage(nextPage);
+  };
   const onRefresh = () => {
     setItems([]);
     setNextPage(initialPage);
@@ -61,7 +65,7 @@ const MyList = () => {
       data={items}
       renderItem={renderItem}
       contentContainerStyle={{gap: 10}}
-      onEndReached={() => fetchPage(nextPage)}
+      onEndReached={onEndReached}
       onEndReachedThreshold={3}
       ListFooterComponent={() => (
         <>{loading && <ActivityIndicator size="large" />}</>
@@ -71,7 +75,7 @@ const MyList = () => {
       // removeClippedSubviews={true}
       initialNumToRender={3}
       // keyExtractor={(item, index) => `${item.name}-${index}`}
-      debug
+      //   debug
       getItemLayout={(items, index) => ({
         length: itemHeight,
         offset: (itemHeight + 5) * index,
