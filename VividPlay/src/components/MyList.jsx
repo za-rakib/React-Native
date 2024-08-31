@@ -4,12 +4,15 @@ import {
   ActivityIndicator,
   Dimensions,
   FlatList,
+  SafeAreaView,
   Text,
   useWindowDimensions,
   View,
 } from 'react-native';
 import CharacterListItem from './CharacterListItem';
 import {useCallback, useEffect, useState} from 'react';
+import Header from '../Animation/Header';
+import Tabs from '../Animation/Tabs';
 const initialPage = 'https://rickandmortyapi.com/api/character';
 
 const MyList = () => {
@@ -57,27 +60,31 @@ const MyList = () => {
   // console.log({itemHeight});
 
   return (
-    <FlatList
-      data={items}
-      renderItem={renderItem}
-      contentContainerStyle={{gap: 10}}
-      onEndReached={() => fetchPage(nextPage)}
-      onEndReachedThreshold={3}
-      ListFooterComponent={() => (
-        <>{loading && <ActivityIndicator size="large" />}</>
-      )}
-      refreshing={loading}
-      // onRefresh={onRefresh}
-      // removeClippedSubviews={true}
-      initialNumToRender={3}
-      // keyExtractor={(item, index) => `${item.name}-${index}`}
-      debug
-      // getItemLayout={(items, index) => ({
-      //   length: itemHeight,
-      //   offset: (itemHeight + 5) * index,
-      //   index,
-      // })}
-    />
+    <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
+      <Header />
+      <Tabs />
+      <FlatList
+        data={items}
+        renderItem={renderItem}
+        contentContainerStyle={{gap: 10}}
+        onEndReached={() => fetchPage(nextPage)}
+        onEndReachedThreshold={3}
+        ListFooterComponent={() => (
+          <>{loading && <ActivityIndicator size="large" />}</>
+        )}
+        refreshing={loading}
+        // onRefresh={onRefresh}
+        removeClippedSubviews={true}
+        initialNumToRender={3}
+        // keyExtractor={(item, index) => `${item.name}-${index}`}
+        //   debug
+        getItemLayout={(items, index) => ({
+          length: itemHeight,
+          offset: (itemHeight + 5) * index,
+          index,
+        })}
+      />
+    </SafeAreaView>
   );
 };
 

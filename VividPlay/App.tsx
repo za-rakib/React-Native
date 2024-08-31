@@ -11,9 +11,10 @@ export default function App() {
       {/* <SafeAreaView style={styles.container}>
         <Animation />
       </SafeAreaView> */}
-      <Animation />
+      {/* <Animation /> */}
       {/* <Test /> */}
       {/* <Flag /> */}
+      <MyList />
     </GestureHandlerRootView>
   );
 }

@@ -6,16 +6,10 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 export default function Header() {
   return (
     <View style={styles.row}>
-      {/* <Image
-        style={styles.logo}
-        source={{
-          uri: 'https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6.jpg',
-        }}
-      /> */}
       <View style={styles.logo}>
         <Image
           style={styles.logoImage}
-          source={require('../assets/Rong.png')}
+          source={require('../assets/logo.png')}
         />
       </View>
       <View style={[styles.row, {width: '30%', marginRight: 10}]}>
@@ -36,13 +30,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logoImage: {
-    width: 80,
-    height: 50,
+    width: 100,
+    height: 80,
     resizeMode: 'contain',
   },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginBottom: 20,
   },
 });

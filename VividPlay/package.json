@@ -10,6 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-vector-icons/common": "^0.0.1-alpha.20",
+    "@react-native-vector-icons/fontawesome6": "^6.6.0-alpha.28",
     "react": "18.2.0",
     "react-native": "0.74.3",
     "react-native-gesture-handler": "^2.18.1",
