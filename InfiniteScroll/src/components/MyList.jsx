@@ -32,7 +32,7 @@ const MyList = () => {
     setLoading(false);
   };
 
-  const onEndReached = () => {
+  const conEndReached = () => {
     console.log('on end');
     fetchPage(nextPage);
   };
