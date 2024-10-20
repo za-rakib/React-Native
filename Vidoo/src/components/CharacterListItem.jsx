@@ -8,11 +8,14 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {memo} from 'react';
+import {useDispatch} from 'react-redux';
+import {setPlayerItem} from '../features/video/videoSlice';
 
 const SIZES = Dimensions.get('window');
 const BIG_IMAGE_SIZE = SIZES.height / 4;
 
 const CharacterListItem = ({character}) => {
+  const dispatch = useDispatch();
   // Status color logic
   const statusColor =
     character.status === 'Alive'
@@ -21,10 +24,14 @@ const CharacterListItem = ({character}) => {
       ? 'red'
       : 'gray';
 
+  const handleVideoPressed = () => {
+    dispatch(setPlayerItem(character));
+    console.log('video');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.itemWrapper}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleVideoPressed}>
           <View style={styles.playerContainer}>
             <Image style={styles.image} source={{uri: character.image}} />
           </View>

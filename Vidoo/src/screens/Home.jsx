@@ -21,7 +21,9 @@ const Home = () => {
 
   // Fetches the next page of characters from the API
   const fetchPage = async url => {
-    if (loading) return;
+    if (loading) {
+      return;
+    }
     setLoading(true);
 
     try {

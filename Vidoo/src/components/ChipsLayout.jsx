@@ -10,6 +10,9 @@ export default function ChipsLayout() {
         contentContainerStyle={{paddingHorizontal: 10}}>
         <Text style={styles.tab}>All</Text>
         <Text style={styles.tab}>News</Text>
+        <Text style={styles.tab}>Comedy</Text>
+        <Text style={styles.tab}>Lifestyle</Text>
+        <Text style={styles.tab}>Education</Text>
         <Text style={styles.tab}>Music</Text>
         <Text style={styles.tab}>Programming</Text>
         <Text style={styles.tab}>Javascript</Text>
@@ -17,9 +20,6 @@ export default function ChipsLayout() {
         <Text style={styles.tab}>Gaming</Text>
         <Text style={styles.tab}>Sports</Text>
         <Text style={styles.tab}>Tech</Text>
-        <Text style={styles.tab}>Comedy</Text>
-        <Text style={styles.tab}>Lifestyle</Text>
-        <Text style={styles.tab}>Education</Text>
       </ScrollView>
     </View>
   );
@@ -33,6 +33,6 @@ const styles = StyleSheet.create({
     marginRight: 5,
     borderRadius: 10,
     overflow: 'hidden',
-    marginBottom: 20,
+    marginBottom: 10,
   },
 });
