@@ -62,10 +62,8 @@ const Player = () => {
     })
     .onEnd(e => {
       if (isFullScreen) return;
-      const endPosition =
-        e.velocityY > 0 && (offsetY.value > 100 || e.velocityY > 800)
-          ? BOTTOM_TRANSLATE_Y
-          : 0;
+      const shouldGoBottom = e.velocityY > 0 && offsetY.value > 50;
+      const endPosition = shouldGoBottom ? BOTTOM_TRANSLATE_Y : 0;
 
       translateY.value = withSpring(endPosition, {
         damping: 15,
@@ -113,14 +111,6 @@ const Player = () => {
       ['black', '#1f1f1f'],
     ),
   }));
-
-  // Styles for video translation and resizing
-  //   const translateStyle = useAnimatedStyle(() => ({
-  //     transform: [
-  //       {translateY: isFullScreen ? 0 : translateY.value},
-  //       {scale: scale.value},
-  //     ],
-  //   }));
 
   const videoStyle = useAnimatedStyle(() => ({
     width: interpolate(
