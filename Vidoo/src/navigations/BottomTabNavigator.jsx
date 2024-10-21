@@ -16,8 +16,8 @@ const BottomTabNavigator = () => {
   const tabHeight = insets.bottom + 50;
   const playerItem = useSelector(state => state.video.playerItem);
 
-  console.log({playerItem});
-  console.log({tabHeight});
+  //   console.log({playerItem});
+  //   console.log({tabHeight});
   return (
     <>
       <Tab.Navigator

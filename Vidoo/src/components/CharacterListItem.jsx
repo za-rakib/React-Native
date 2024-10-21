@@ -26,7 +26,7 @@ const CharacterListItem = ({character}) => {
 
   const handleVideoPressed = () => {
     dispatch(setPlayerItem(character));
-    console.log('video');
+    //  console.log('video');
   };
   return (
     <View style={styles.container}>
