@@ -35,10 +35,9 @@ const Player = () => {
   const [localIsAtBottom, setLocalIsAtBottom] = useState(false);
 
   const BOTTOM_TRANSLATE_Y = useMemo(
-    () => (screenHeight * 95) / 100 - VIDEO_HEIGHT_COL - 80,
+    () => (screenHeight * 100) / 100 - VIDEO_HEIGHT_COL - 80,
     [],
   );
-
   const translateY = useSharedValue(BOTTOM_TRANSLATE_Y);
   const opacity = useSharedValue(0);
   const offsetY = useSharedValue(0);
