@@ -45,9 +45,12 @@ const index = () => {
           </Text>
         </Animated.View>
 
-        <View className="mb-12">
+        <Animated.View
+          entering={FadeInDown.delay(300).springify()}
+          className="mb-12"
+        >
           <TouchableOpacity
-            onPress={() => router.replace("home")}
+            onPress={() => router.push("home")}
             style={{ height: hp(7), width: wp(80) }}
             className="flex items-center justify-center mx-auto border-2 rounded-full bg-rose-500 border-neutral-200"
           >
@@ -58,7 +61,7 @@ const index = () => {
               Get Started
             </Text>
           </TouchableOpacity>
-        </View>
+        </Animated.View>
       </LinearGradient>
     </View>
   );
