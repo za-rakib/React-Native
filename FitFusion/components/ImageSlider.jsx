@@ -1,31 +1,61 @@
-import { View, Text } from "react-native";
-import React from "react";
-import Carousel, { ParallaxImage } from "react-native-snap-carousel";
-import { sliderImages } from "../constants";
+import React, { useRef } from "react";
+import { View, StyleSheet, Dimensions, Image } from "react-native";
+import Carousel from "react-native-snap-carousel";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
+const { width: screenWidth } = Dimensions.get("window");
+
+const sliderImages = [
+  require("../assets/images/slide1.png"),
+  require("../assets/images/slide2.png"),
+  require("../assets/images/slide3.png"),
+  require("../assets/images/slide4.png"),
+  require("../assets/images/slide5.png"),
+];
+
 const ImageSlider = () => {
-  const ItemCard = () => {
-    return <Text>Slider</Text>;
+  const carouselRef = useRef(null);
+
+  const _renderItem = ({ item, index }) => {
+    return (
+      <View style={styles.slide}>
+        <Image source={item} style={styles.image} resizeMode="cover" />
+      </View>
+    );
   };
 
   return (
     <Carousel
+      ref={carouselRef}
       data={sliderImages}
-      loop={true}
+      renderItem={_renderItem}
+      sliderWidth={screenWidth}
+      itemWidth={screenWidth * 0.9}
       autoplay={true}
-      renderItem={ItemCard}
-      hasParallaxImages={true}
-      sliderWidth={wp(100)}
-      firstItem={1}
-      autoplayInterval={4000}
-      itemWidth={wp(100) - 70}
-      slideStyle={{ display: "flex", alignItems: "center" }}
+      loop={true}
+      autoplayDelay={1000}
+      autoplayInterval={3000}
     />
   );
 };
+
+const styles = StyleSheet.create({
+  slide: {
+    width: screenWidth * 0.9,
+    height: hp(25),
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 15,
+    overflow: "hidden",
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+    borderRadius: 15,
+  },
+});
 
 export default ImageSlider;

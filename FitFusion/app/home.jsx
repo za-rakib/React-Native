@@ -23,7 +23,7 @@ const home = () => {
           </Text>
           <Text
             style={{ fontSize: hp(4.5) }}
-            className="font-bold tracking-wider text-rose-500"
+            className="mt-3 font-bold tracking-wider text-rose-500"
           >
             WORKOUT
           </Text>
@@ -35,7 +35,7 @@ const home = () => {
             style={{ height: hp(6), width: hp(6) }}
           />
           <View
-            className="flex items-center justify-center rounded-full bg-neutral-200 border-[3px] border-neutral-300"
+            className="flex items-center justify-center rounded-full bg-neutral-200 border-[3px] border-neutral-300 mt-2"
             style={{ height: hp(5.5), width: hp(5.5) }}
           >
             <MaterialIcons
@@ -47,7 +47,7 @@ const home = () => {
         </View>
       </View>
       {/* Image slider */}
-      <View>
+      <View className="mt-5">
         <ImageSlider />
       </View>
     </SafeAreaView>
