@@ -8,6 +8,7 @@ import {
 } from "react-native-responsive-screen";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import ImageSlider from "../components/ImageSlider";
+import BodyParts from "../components/BodyParts";
 
 const home = () => {
   return (
@@ -23,7 +24,7 @@ const home = () => {
           </Text>
           <Text
             style={{ fontSize: hp(4.5) }}
-            className="mt-3 font-bold tracking-wider text-rose-500"
+            className="mt-1 font-bold tracking-wider text-rose-500"
           >
             WORKOUT
           </Text>
@@ -47,8 +48,12 @@ const home = () => {
         </View>
       </View>
       {/* Image slider */}
-      <View className="mt-5">
+      <View className="my-4">
         <ImageSlider />
+      </View>
+      {/* body parts section */}
+      <View className="flex">
+        <BodyParts />
       </View>
     </SafeAreaView>
   );

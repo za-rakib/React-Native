@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { View, StyleSheet, Dimensions, Image } from "react-native";
 import Carousel from "react-native-snap-carousel";
+import { sliderImages } from "../constants/index";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -8,18 +9,10 @@ import {
 
 const { width: screenWidth } = Dimensions.get("window");
 
-const sliderImages = [
-  require("../assets/images/slide1.png"),
-  require("../assets/images/slide2.png"),
-  require("../assets/images/slide3.png"),
-  require("../assets/images/slide4.png"),
-  require("../assets/images/slide5.png"),
-];
-
 const ImageSlider = () => {
   const carouselRef = useRef(null);
 
-  const _renderItem = ({ item, index }) => {
+  const renderItem = ({ item, index }) => {
     return (
       <View style={styles.slide}>
         <Image source={item} style={styles.image} resizeMode="cover" />
@@ -31,7 +24,7 @@ const ImageSlider = () => {
     <Carousel
       ref={carouselRef}
       data={sliderImages}
-      renderItem={_renderItem}
+      renderItem={renderItem}
       sliderWidth={screenWidth}
       itemWidth={screenWidth * 0.9}
       autoplay={true}
@@ -45,7 +38,7 @@ const ImageSlider = () => {
 const styles = StyleSheet.create({
   slide: {
     width: screenWidth * 0.9,
-    height: hp(25),
+    height: hp(26),
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 15,
