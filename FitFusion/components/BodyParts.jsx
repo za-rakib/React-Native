@@ -1,4 +1,6 @@
-import { View, Text, FlatList } from "react-native";
+// BodyParts.js
+
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import React from "react";
 import {
   widthPercentageToDP as wp,
@@ -6,6 +8,7 @@ import {
 } from "react-native-responsive-screen";
 import { bodyParts } from "../constants";
 import BodyPartsCard from "./BodyPartsCard";
+import { useRouter } from "expo-router";
 
 const BodyParts = () => {
   return (

@@ -1,3 +1,5 @@
+// home.js
+
 import { View, Text, Image } from "react-native";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
@@ -10,11 +12,12 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import ImageSlider from "../components/ImageSlider";
 import BodyParts from "../components/BodyParts";
 
-const home = () => {
+const Home = () => {
+  // Changed to PascalCase for component naming convention
   return (
-    <SafeAreaView className="flex flex-1 space-y-5 bg-white" edges={["top"]}>
+    <SafeAreaView className="flex flex-1 bg-white" edges={["top"]}>
       <StatusBar style="dark" />
-      <View className="flex-row items-center justify-between mx-5">
+      <View className="flex-row items-center justify-between mx-5 mt-2">
         <View className="space-y-2">
           <Text
             style={{ fontSize: hp(4.5) }}
@@ -52,11 +55,11 @@ const home = () => {
         <ImageSlider />
       </View>
       {/* body parts section */}
-      <View className="flex">
+      <View className="flex-1">
         <BodyParts />
       </View>
     </SafeAreaView>
   );
 };
 
-export default home;
+export default Home; // Changed to PascalCase for consistency
