@@ -9,7 +9,8 @@
         "newArchEnabled": true,
         "scheme": "EchoTune",
         "ios": {
-            "supportsTablet": true
+            "supportsTablet": true,
+            "bundleIdentifier": "com.anonymous.EchoTune"
         },
         "android": {
             "adaptiveIcon": {
@@ -31,6 +32,12 @@
                     "imageWidth": 200,
                     "resizeMode": "contain",
                     "backgroundColor": "#ffffff"
+                }
+            ],
+            [
+                "expo-dev-client",
+                {
+                    "launchMode": "most-recent"
                 }
             ]
         ],
