@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gray700 {
+  color: #475569;
+}
+.gray200 {
+  color: #e2e8f0;
+}
+.gray950 {
+  color: #0f172a;
+}
+.skyBlue {
+  color: #87ceeb;
+}
+.skyBlue_bg {
+  background-color: #87ceeb;
+}
+.secondaryTextColor {
+  color: #f43f5e;
+}
+.secondaryBgColor {
+  background-color: #f43f5e;
+}

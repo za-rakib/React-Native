@@ -1,0 +1,109 @@
+{
+  "active_tokens": [
+    {
+      "issued_at": "2025-09-20T09:05:54.967141",
+      "refresh_token": "2c50dce4-7f9c-4fb9-a08d-59828fa4cff5",
+      "revoked_at": null,
+      "token_id": 217,
+      "user_id": 19
+    },
+    {
+      "issued_at": "2025-09-20T09:10:03.898814",
+      "refresh_token": "d2b8e417-0ca3-49fd-8646-9516523affe0",
+      "revoked_at": null,
+      "token_id": 218,
+      "user_id": 19
+    },
+    {
+      "issued_at": "2025-09-20T09:31:25.309511",
+      "refresh_token": "5a21f9b8-aef5-4e21-ac84-2675ec65c746",
+      "revoked_at": null,
+      "token_id": 219,
+      "user_id": 19
+    }
+  ],
+  "audit_logs": [
+    {
+      "action": "User Created",
+      "cre_date": "2025-09-20T09:05:14.837795",
+      "ip_address": null,
+      "log_id": 582,
+      "user_agent": null,
+      "user_id": 19
+    },
+    {
+      "action": "User Authenticated",
+      "cre_date": "2025-09-20T09:05:38.909888",
+      "ip_address": null,
+      "log_id": 583,
+      "user_agent": null,
+      "user_id": 19
+    },
+    {
+      "action": "User Authenticated",
+      "cre_date": "2025-09-20T09:05:54.648063",
+      "ip_address": null,
+      "log_id": 584,
+      "user_agent": null,
+      "user_id": 19
+    },
+    {
+      "action": "Token Created",
+      "cre_date": "2025-09-20T09:05:54.967141",
+      "ip_address": null,
+      "log_id": 585,
+      "user_agent": null,
+      "user_id": 19
+    },
+    {
+      "action": "User Authenticated",
+      "cre_date": "2025-09-20T09:10:03.593316",
+      "ip_address": null,
+      "log_id": 586,
+      "user_agent": null,
+      "user_id": 19
+    },
+    {
+      "action": "Token Created",
+      "cre_date": "2025-09-20T09:10:03.898814",
+      "ip_address": null,
+      "log_id": 587,
+      "user_agent": null,
+      "user_id": 19
+    },
+    {
+      "action": "User Authenticated",
+      "cre_date": "2025-09-20T09:31:25.005646",
+      "ip_address": null,
+      "log_id": 588,
+      "user_agent": null,
+      "user_id": 19
+    },
+    {
+      "action": "Token Created",
+      "cre_date": "2025-09-20T09:31:25.309511",
+      "ip_address": null,
+      "log_id": 589,
+      "user_agent": null,
+      "user_id": 19
+    }
+  ],
+  "birth_date": null,
+  "country": "France",
+  "cre_date": "2025-09-20T09:05:14.517668",
+  "del_date": null,
+  "email": "seyay41548@cnguopin.com",
+  "email_verified_at": "2025-09-20T09:05:49.394925",
+  "family_id": null,
+  "first_name": "Test1",
+  "gender": "undisclosed",
+  "is_email_verified": true,
+  "last_mod_by": null,
+  "last_name": "",
+  "mod_date": "2025-09-20T09:05:49.430850",
+  "onboarding_step": null,
+  "password_reset_at": null,
+  "preferred_language": "fr",
+  "role": "parent",
+  "user_id": 19
+}
